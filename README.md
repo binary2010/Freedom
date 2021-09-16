@@ -129,5 +129,24 @@ https://my.oschina.net/alchemystar/blog/1438839
 ## github链接
 https://github.com/alchemystar/Freedom     
 ## 码云链接
-https://gitee.com/alchemystar/Freedom     
+https://gitee.com/alchemystar/Freedom   
 
+## 更新jar
+```
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>3.0.1</version>
+</dependency>
+```
+
+## 分析记录
+使用MySQL 5.7 协议 
+登录
+默认端口8090
+账号pay
+密码MiraCle
+mysql -u pay -h xxx.xxx.xxx.xxx -P 8090 -p MiraCle
+
+show databases;
+show tables;

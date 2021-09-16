@@ -12,7 +12,7 @@ public class Database {
     private static Database database = null;
     // 默认端口号是8090
     private int serverPort = 8090;
-    // 默认用户名密码是pay|miracle
+    // 默认用户名密码是pay|MiraCle
     private String userName = "pay";
     private String passWd = "MiraCle";
     private TableLoader tableLoader;
