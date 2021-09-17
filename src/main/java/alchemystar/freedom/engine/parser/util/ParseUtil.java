@@ -154,7 +154,9 @@ public final class ParseUtil {
                 return parseIdentifierEscape(stmt, aliasIndex);
             default:
                 int offset = aliasIndex;
-                for (; offset < stmt.length() && CharTypes.isIdentifierChar(stmt.charAt(offset)); ++offset);
+                for (; offset < stmt.length() && CharTypes.isIdentifierChar(stmt.charAt(offset)); ++offset) {
+                    ;
+                }
                 return stmt.substring(aliasIndex, offset);
         }
     }
@@ -168,14 +170,18 @@ public final class ParseUtil {
                     for (int i = n; i < len; ++i) {
                         if (stmt.charAt(i) == '*') {
                             int m = i + 1;
-                            if (len > m && stmt.charAt(m) == '/') return m;
+                            if (len > m && stmt.charAt(m) == '/') {
+                                return m;
+                            }
                         }
                     }
                 }
                 break;
             case '#':
                 for (int i = n + 1; i < len; ++i) {
-                    if (stmt.charAt(i) == '\n') return i;
+                    if (stmt.charAt(i) == '\n') {
+                        return i;
+                    }
                 }
                 break;
         }
@@ -217,7 +223,9 @@ public final class ParseUtil {
                                                             int offset,
                                                             String nextExpectedString,
                                                             boolean checkSepChar) {
-        if (nextExpectedString == null || nextExpectedString.length() < 1) return offset;
+        if (nextExpectedString == null || nextExpectedString.length() < 1) {
+            return offset;
+        }
         int i = offset;
         int index = 0;
         char expectedChar;
@@ -241,7 +249,9 @@ public final class ParseUtil {
             if (checkSepChar) {
                 ok = nextCharIsSep(stmt, i);
             }
-            if (ok) return i;
+            if (ok) {
+                return i;
+            }
         }
         return offset;
     }

@@ -18,6 +18,7 @@ public class ClusterIndexEntry extends IndexEntry {
     }
 
     // cluster 的 compareEntry key 就是主键
+    @Override
     public IndexEntry getCompareEntry() {
         if (compareEntry == null) {
             compareEntry = new NotLeafEntry(new Value[] {getRowId()});
@@ -26,6 +27,7 @@ public class ClusterIndexEntry extends IndexEntry {
         return compareEntry;
     }
 
+    @Override
     public IndexEntry getDeleteCompareEntry() {
         return getCompareEntry();
     }

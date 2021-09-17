@@ -206,18 +206,22 @@ public class TableFilter implements ColumnResolver {
         return result;
     }
 
+    @Override
     public Attribute[] getAttributes() {
         return table.getAttributes();
     }
 
+    @Override
     public Value getValue(String columnName) {
         return current.getValues()[table.getAttributeIndex(columnName)];
     }
 
+    @Override
     public TableFilter getTableFilter() {
         return this;
     }
 
+    @Override
     public String getTableAlias() {
         return alias;
     }

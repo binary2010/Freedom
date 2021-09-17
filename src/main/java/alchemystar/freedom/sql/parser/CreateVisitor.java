@@ -102,13 +102,13 @@ public class CreateVisitor extends SQLASTVisitorAdapter {
 
     public int getType(SQLColumnDefinition element) {
         String dataType = element.getDataType().getName();
-        if (dataType.equalsIgnoreCase("int")) {
+        if ("int".equalsIgnoreCase(dataType)) {
             return Value.INT;
-        } else if (dataType.equalsIgnoreCase("bigint") || dataType.equalsIgnoreCase("long")) {
+        } else if ("bigint".equalsIgnoreCase(dataType) || "long".equalsIgnoreCase(dataType)) {
             return Value.LONG;
-        } else if (dataType.equalsIgnoreCase("varchar") || dataType.equalsIgnoreCase("String")) {
+        } else if ("varchar".equalsIgnoreCase(dataType) || "String".equalsIgnoreCase(dataType)) {
             return Value.STRING;
-        } else if (dataType.equalsIgnoreCase("bool") || dataType.equalsIgnoreCase("boolean")) {
+        } else if ("bool".equalsIgnoreCase(dataType) || "boolean".equalsIgnoreCase(dataType)) {
             return Value.BOOLEAN;
         } else {
             throw new RuntimeException("not support this type :" + dataType);

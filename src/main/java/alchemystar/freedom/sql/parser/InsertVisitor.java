@@ -37,6 +37,7 @@ public class InsertVisitor extends SchemaStatVisitor {
 
     private Table table;
 
+    @Override
     public boolean visit(SQLInsertStatement x) {
         tableSource = x.getTableSource();
         if (!(tableSource instanceof SQLExprTableSource)) {

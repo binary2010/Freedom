@@ -38,6 +38,7 @@ public class HandshakePacket extends MySQLPacket {
         restOfScrambleBuff = mm.readBytesWithNull();
     }
 
+    @Override
     public void write(final ChannelHandlerContext ctx) {
         // default init 256,so it can avoid buff extract
         final ByteBuf buffer = ctx.alloc().buffer();

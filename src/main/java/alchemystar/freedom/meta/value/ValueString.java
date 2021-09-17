@@ -38,6 +38,7 @@ public class ValueString extends Value {
         return wrapper.getBuffer();
     }
 
+    @Override
     public void read(byte[] bytes) {
         s = new String(bytes);
     }
@@ -47,6 +48,7 @@ public class ValueString extends Value {
         return s;
     }
 
+    @Override
     public String getString() {
         return s;
     }
@@ -89,7 +91,7 @@ public class ValueString extends Value {
         throw new RuntimeException("not support this type , valueType=" + v.getType());
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         System.out.println("alchemystar1".compareTo("alchemystar10"));
     }
 }

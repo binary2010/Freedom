@@ -30,6 +30,7 @@ public class SelectVisitor extends SQLASTVisitorAdapter {
     private SQLExpr whereCondition;
     private Map<String, TableFilter> aliasMap = new HashMap<String, TableFilter>();
 
+    @Override
     public boolean visit(SQLSelectQueryBlock x) {
         whereCondition = x.getWhere();
         initTableFilter(x.getFrom());
@@ -46,7 +47,7 @@ public class SelectVisitor extends SQLASTVisitorAdapter {
             } else {
                 if (sqlSelectItem.getExpr() instanceof SQLPropertyExpr) {
                     SQLPropertyExpr sqlPropertyExpr = (SQLPropertyExpr) sqlSelectItem.getExpr();
-                    if (sqlPropertyExpr.getSimpleName().equals("*")) {
+                    if ("*".equals(sqlPropertyExpr.getSimpleName())) {
                         handleOneWildCard(sqlSelectItem);
                     } else {
                         selectItems.add(sqlSelectItem);

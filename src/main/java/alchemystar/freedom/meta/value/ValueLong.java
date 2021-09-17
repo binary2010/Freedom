@@ -48,6 +48,7 @@ public class ValueLong extends Value {
         return String.valueOf(i);
     }
 
+    @Override
     public long getLong() {
         return i;
     }
@@ -58,6 +59,7 @@ public class ValueLong extends Value {
     }
 
 
+    @Override
     public int getInt() {
         return (int)i;
     }
@@ -89,18 +91,22 @@ public class ValueLong extends Value {
         return new ValueLong(i + v.getLong());
     }
 
+    @Override
     public Value subtract(Value v) {
         return new ValueLong(i - v.getLong());
     }
 
+    @Override
     public Value divide(Value v) {
         return new ValueLong(i / v.getLong());
     }
 
+    @Override
     public Value multiply(Value v) {
         return new ValueLong(i * v.getLong());
     }
 
+    @Override
     public Value concat(Value v) {
         return new ValueString(this.toString() + v.toString());
     }

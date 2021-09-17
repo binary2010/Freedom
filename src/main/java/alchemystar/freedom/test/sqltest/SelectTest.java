@@ -28,7 +28,7 @@ public class SelectTest extends BasicSelectTest {
                     + ".id>=3 and a.id < 10 and "
                     + " b.id>=2 and b.id < 10 and c.id>=1 and c.id < 10 and a.name < 'alchemystar5'";
 
-    public static void main(String args[]){
+    public static void main(String[] args){
         System.out.println(joinSql);
     }
 

@@ -32,6 +32,7 @@ public class WhereVisitor extends SQLASTVisitorAdapter {
     // 是否冲突
     private boolean isConflict;
 
+    @Override
     public boolean visit(SQLBinaryOpExpr expr) {
         SQLExpr left = expr.getLeft();
         SQLExpr right = expr.getRight();

@@ -15,13 +15,13 @@ public interface SystemConfig {
 
     int DEFAULT_SPECIAL_POINT_LENGTH = 64;
 
-    String RELATION_FILE_PRE_FIX = "D:\\WorkPlace\\Develop\\SourceCode\\GitHub\\Freedom\\database";
+    String RELATION_FILE_PRE_FIX = "D:\\WorkPlace\\Develop\\SourceCode\\GitHub\\Freedom\\database\\";
 
-    String FREEDOM_REL_DATA_PATH = RELATION_FILE_PRE_FIX + "\\data";
+    String FREEDOM_REL_DATA_PATH = RELATION_FILE_PRE_FIX + "data";
 
-    String FREEDOM_REL_META_PATH = RELATION_FILE_PRE_FIX + "\\meta";
+    String FREEDOM_REL_META_PATH = RELATION_FILE_PRE_FIX + "meta";
 
-    String FREEDOM_LOG_FILE_NAME = RELATION_FILE_PRE_FIX + "\\log\\log";
+    String FREEDOM_LOG_FILE_NAME = RELATION_FILE_PRE_FIX + "log\\log";
 
     String Database = "";
     // 36小时内连接不发起请求就干掉 秒为单位

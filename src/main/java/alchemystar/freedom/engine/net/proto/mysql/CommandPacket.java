@@ -45,6 +45,7 @@ public class CommandPacket extends MySQLPacket {
         return buffer;
     }
 
+    @Override
     public void write(ChannelHandlerContext ctx) {
         ctx.writeAndFlush(getByteBuf(ctx));
     }

@@ -5,7 +5,8 @@ import alchemystar.freedom.index.bp.Position;
 import alchemystar.freedom.meta.IndexEntry;
 
 /**
- * @Author lizhuyang
+ *
+ * @author lizhuyang
  */
 public class BaseIndexCursor implements Cursor{
 
@@ -74,6 +75,7 @@ public class BaseIndexCursor implements Cursor{
         }
     }
 
+    @Override
     public void reset() {
         resetCurrentPos(startPos);
     }

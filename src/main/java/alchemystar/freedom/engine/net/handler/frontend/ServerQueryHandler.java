@@ -21,6 +21,7 @@ public class ServerQueryHandler implements FrontendQueryHandler {
         this.source = source;
     }
 
+    @Override
     public void query(String origin) {
 
         logger.info("sql = " + origin);

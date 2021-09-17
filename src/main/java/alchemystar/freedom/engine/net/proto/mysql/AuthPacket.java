@@ -74,6 +74,7 @@ public class AuthPacket extends MySQLPacket{
         c.writeAndFlush(buffer);
     }
 
+    @Override
     public void write(ChannelHandlerContext ctx) {
         // default init 256,so it can avoid buff extract
         ByteBuf buffer = ctx.alloc().buffer();

@@ -12,6 +12,7 @@ public class NotLeafEntry extends IndexEntry {
     }
 
     // cluster的非叶子节点,其本身就是compare key
+    @Override
     public IndexEntry getCompareEntry() {
         return this;
     }

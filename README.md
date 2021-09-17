@@ -150,3 +150,24 @@ mysql -u pay -h xxx.xxx.xxx.xxx -P 8090 -p MiraCle
 
 show databases;
 show tables;
+
+
+创建数据表必须添加primary key
+```sql
+create table archer (id bigint,name varchar(256),comment varchar(256), PRIMARY KEY ('id'),KEY name ('name'));
+insert into archer (id,name,comment) values (123,'aa','bb');
+select * from archer;
+```
+
+
+cd /d D:\Program Files\MySQL\MySQL Server 5.7\bin
+mysql -u pay -h xxx.xxx.xxx.xxx -P 8090 -p
+MiraCle
+
+show databases;
+use freedom;
+show tables;
+
+create table archer (id bigint,name varchar(256),comment varchar(256), PRIMARY KEY ('id'),KEY name ('name'));
+insert into archer (id,name,comment) values (123,'aa','bb');
+select * from archer;

@@ -346,6 +346,7 @@ public class MySQLMessage {
         return src == null ? null : new BigDecimal(src);
     }
 
+    @Override
     public String toString() {
         return new StringBuilder().append(Arrays.toString(data)).toString();
     }

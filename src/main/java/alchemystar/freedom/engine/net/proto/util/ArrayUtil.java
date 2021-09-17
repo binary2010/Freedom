@@ -13,8 +13,9 @@ public class ArrayUtil {
     }
 
     public static boolean contains(String[] list, String str) {
-        if (list == null)
+        if (list == null) {
             return false;
+        }
         for (String string : list) {
             if (equals(str, string)) {
                 return true;

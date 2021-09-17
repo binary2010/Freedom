@@ -25,6 +25,7 @@ public class DeleteVisitor extends SQLASTVisitorAdapter {
 
     private SQLTableSource tableSource;
 
+    @Override
     public boolean visit(SQLDeleteStatement x) {
         tableSource = x.getTableSource();
         if (!(tableSource instanceof SQLExprTableSource)) {

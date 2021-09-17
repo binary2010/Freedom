@@ -7,6 +7,6 @@ package alchemystar.freedom.test.bptest;
  */
 public class FStoreTest {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
     }
 }
